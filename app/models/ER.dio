@@ -1,4 +1,4 @@
-<mxfile host="a1a28148-5a67-4a20-b2c1-b76c8ad4924b" modified="2020-09-11T21:30:15.596Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.49.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="S-m4ebPQ2o2rkfFL0oXp" version="13.1.3">
+<mxfile host="a1a28148-5a67-4a20-b2c1-b76c8ad4924b" modified="2020-09-12T04:08:11.450Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.49.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="Jrh3wIK8BFiSWyS46kbi" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
         <mxGraphModel dx="568" dy="1175" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -36,8 +36,8 @@
                 </mxCell>
                 <mxCell id="31" value="" style="endArrow=ERoneToMany;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="200" y="260" as="sourcePoint"/>
-                        <mxPoint x="320" y="260.5" as="targetPoint"/>
+                        <mxPoint x="200" y="290" as="sourcePoint"/>
+                        <mxPoint x="320" y="290.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="32" value="" style="endArrow=ERoneToMany;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="22" edge="1">
@@ -81,12 +81,12 @@
                 </mxCell>
                 <mxCell id="52" value="" style="endArrow=ERone;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" edge="1" parent="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="200" y="470" as="sourcePoint"/>
-                        <mxPoint x="320" y="470.5" as="targetPoint"/>
+                        <mxPoint x="200" y="450" as="sourcePoint"/>
+                        <mxPoint x="320" y="450.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="16" value="orders" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="320" y="180" width="160" height="338" as="geometry"/>
+                    <mxGeometry x="320" y="240" width="160" height="234" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="26" width="160" height="26" as="geometry"/>
@@ -94,35 +94,23 @@
                 <mxCell id="48" value="item_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="52" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="card_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
+                <mxCell id="36" value="postal_code" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="78" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="card_exp_month" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
+                <mxCell id="37" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="104" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="card_exp_year" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
+                <mxCell id="38" value="city" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="130" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="card_cvc" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
+                <mxCell id="39" value="addresses" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="156" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="postal_code" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
+                <mxCell id="40" value="building" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
                     <mxGeometry y="182" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
-                    <mxGeometry y="208" width="160" height="26" as="geometry"/>
-                </mxCell>
-                <mxCell id="38" value="city" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
-                    <mxGeometry y="234" width="160" height="26" as="geometry"/>
-                </mxCell>
-                <mxCell id="39" value="addresses" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
-                    <mxGeometry y="260" width="160" height="26" as="geometry"/>
-                </mxCell>
-                <mxCell id="40" value="building" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
-                    <mxGeometry y="286" width="160" height="26" as="geometry"/>
-                </mxCell>
                 <mxCell id="41" value="phone_number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="16" vertex="1">
-                    <mxGeometry y="312" width="160" height="26" as="geometry"/>
+                    <mxGeometry y="208" width="160" height="26" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
