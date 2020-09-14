@@ -18,26 +18,28 @@
 
 - has_many :purchases
 - has_many :items
+- has_many :transaction
 
 
 ## items テーブル
 
-| Column              | Type        | Options     |
-| ------------------- | ----------- | ----------- |
-| user_id             | integer     | null: false |
-| name                | string      | null: false |
-| info                | text        | null: false |
-| category            | integer     | null: false |
-| sales_status        | integer     | null: false |
-| shipping_fee_status | integer     | null: false |
-| prefecture          | integer     | null: false |
-| scheduled_delivery  | integer     | null: false |
-| price               | integer     | null: false |
+| Column              | Type    | Options                        |
+| ------------------- | ------- | ------------------------------ |
+| user_id             | integer | null: false, foreign_key: true |
+| name                | string  | null: false                    |
+| info                | text    | null: false                    |
+| category            | integer | null: false                    |
+| sales_status        | integer | null: false                    |
+| shipping_fee_status | integer | null: false                    |
+| prefecture          | integer | null: false                    |
+| scheduled_delivery  | integer | null: false                    |
+| price               | integer | null: false                    |
 
 ### Association
 
 - has_one :purchase
 - belongs_to :user
+- has_many :transaction
 
 
 ## purchases テーブル
@@ -57,16 +59,18 @@
 
 - belongs_to :item
 - belongs_to :user
-- has_one :purchase
+- belongs_to :purchase
 
 
 ## transactions テーブル
 
-| Column  | Type    | Options     |
-| ------- | ------- | ----------- |
-| user_id | integer | null: false |
-| item_id | integer | null: false |
+| Column  | Type    | Options                       |
+| ------- | ------- | ----------------------------- |
+| user_id | integer | null: false, foreign_key:true |
+| item_id | integer | null: false, foreign_key:true |
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :user
+- belongs_to :item
+- has_one :purchase
