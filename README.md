@@ -12,49 +12,61 @@
 | last_name             | string  | null: false |
 | first_name_kana       | string  | null: false |
 | last_name_kana        | string  | null: false |
-| birth_date            | integer | null: false |
+| birth_date            | date    | null: false |
 
 ### Association
 
-- has_many :orders
+- has_many :purchases
 - has_many :items
 
 
 ## items テーブル
 
-| Column                   | Type        | Options                        |
-| ------------------------ | ----------- | ------------------------------ |
-| user_id                  | references  | null: false, foreign_key: true |
-| item_image               | string      | null: false                    |
-| item_name                | string      | null: false                    |
-| item_info                | text        | null: false                    |
-| item_category            | string      | null: false                    |
-| item_sales_status        | string      | null: false                    |
-| item_shipping_fee_status | string      | null: false                    |
-| item_prefecture          | string      | null: false                    |
-| item_scheduled_delivery  | string      | null: false                    |
-| item_price               | integer     | null: false                    |
+| Column              | Type        | Options     |
+| ------------------- | ----------- | ----------- |
+| user_id             | integer     | null: false |
+| name                | string      | null: false |
+| info                | text        | null: false |
+| category            | integer     | null: false |
+| sales_status        | integer     | null: false |
+| shipping_fee_status | integer     | null: false |
+| prefecture          | integer     | null: false |
+| scheduled_delivery  | integer     | null: false |
+| price               | integer     | null: false |
 
 ### Association
 
-- has_one :order
+- has_one :purchase
 - belongs_to :user
 
 
-## orders テーブル
+## purchases テーブル
 
 | Column         | Type        | Options                        |
 | -------------- | ----------- | ------------------------------ |
-| user_id        | references  | null: false, foreign_key: true |
-| item_id        | references  | null: false, foreign_key: true |
-| postal_code    | integer     | null: false                    |
-| prefecture     | string      | null: false                    |
+| postal_code    | string      | null: false                    |
+| prefecture     | integer     | null: false                    |
 | city           | string      | null: false                    |
 | addresses      | string      | null: false                    |
 | building       | string      |                                |
-| phone_number   | integer     |                                |
+| phone_number   | string      | null: false                    |
+| transaction    | references  | null: false, foreign_key: true |
+
 
 ### Association
 
 - belongs_to :item
 - belongs_to :user
+- has_one :purchase
+
+
+## transactions テーブル
+
+| Column  | Type    | Options     |
+| ------- | ------- | ----------- |
+| user_id | integer | null: false |
+| item_id | integer | null: false |
+
+### Association
+
+- belongs_to :purchases
