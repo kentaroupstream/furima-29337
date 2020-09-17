@@ -19,6 +19,7 @@
 - has_many :item_purchases
 
 
+
 ## items テーブル
 
 | Column              | Type    | Options                        |
@@ -39,6 +40,7 @@
 - has_one :item_purchase
 
 
+
 ## item_purchases テーブル
 
 | Column  | Type    | Options                       |
@@ -51,6 +53,7 @@
 - belongs_to :user
 - belongs_to :item
 - has_one :shipping_address
+
 
 
 ## shipping_addresses テーブル
