@@ -6,8 +6,7 @@
 | --------------------- | ------- | ----------- |
 | nickname              | string  | null: false |
 | email                 | string  | null: false |
-| password              | string  | null: false |
-| password_confirmation | string  | null: false |
+| encrypted_password    | string  | null: false |
 | first_name            | string  | null: false |
 | last_name             | string  | null: false |
 | first_name_kana       | string  | null: false |
@@ -18,6 +17,7 @@
 
 - has_many :items
 - has_many :item_purchases
+
 
 
 ## items テーブル
@@ -40,6 +40,7 @@
 - has_one :item_purchase
 
 
+
 ## item_purchases テーブル
 
 | Column  | Type    | Options                       |
@@ -52,6 +53,7 @@
 - belongs_to :user
 - belongs_to :item
 - has_one :shipping_address
+
 
 
 ## shipping_addresses テーブル
