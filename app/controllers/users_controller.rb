@@ -1,5 +1,16 @@
 class UsersController < ApplicationController
-  def User
-    @user = User.new
+
+  def new
   end
+  
+  def create
+    @user = User.new
+
+    if @user.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
 end
