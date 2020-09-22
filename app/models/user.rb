@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many :items
   has_many :item_purchases
 
-
   name_validation = {with: /\A[ぁ-んァ-ン一-龥]/, message: 'Full-width characters'}
   name_kana_validation = {with: /\A[ァ-ヶー－]+\z/, message: 'Full-width katakana characters'}
 
@@ -18,6 +17,6 @@ class User < ApplicationRecord
     validates :last_name, format: name_validation
     validates :first_name_kana, format: name_kana_validation
     validates :last_name_kana, format: name_kana_validation
-    validates :birth_date, presence: true
+    validates :birth_date
   end
 end
