@@ -16,6 +16,9 @@ class Purchase
     validates :addresses
     validates :phone_number, format: { with: /\d{,11}/ }
 
+    #クレジット機能のトークン
+    validates :token
+
   end
 
   def save
