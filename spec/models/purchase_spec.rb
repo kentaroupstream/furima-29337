@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
-
   before do
     @user = FactoryBot.create(:user)
     @item = FactoryBot.create(:item)
@@ -23,39 +22,39 @@ RSpec.describe Purchase, type: :model do
         expect(@purchase.errors.full_messages).to include("Token can't be blank")
       end
       it 'postal_codeが空だと登録できない' do
-        @purchase.postal_code = ""
+        @purchase.postal_code = ''
         @purchase.valid?
         expect(@purchase.errors.full_messages).to include("Postal code can't be blank")
       end
       it 'postal_codeにハイフンがないと登録できない' do
-        @purchase.postal_code = "1234567"
+        @purchase.postal_code = '1234567'
         @purchase.valid?
-        expect(@purchase.errors.full_messages).to include("Postal code is invalid")
+        expect(@purchase.errors.full_messages).to include('Postal code is invalid')
       end
       it 'prefecture_idが1だと登録できない' do
         @purchase.prefecture_id = 1
         @purchase.valid?
-        expect(@purchase.errors.full_messages).to include("Prefecture must be other than 1")
+        expect(@purchase.errors.full_messages).to include('Prefecture must be other than 1')
       end
       it 'cityが空だと登録できない' do
-        @purchase.city = ""
+        @purchase.city = ''
         @purchase.valid?
         expect(@purchase.errors.full_messages).to include("City can't be blank")
       end
       it 'addressesが空だと登録できない' do
-        @purchase.addresses = ""
+        @purchase.addresses = ''
         @purchase.valid?
         expect(@purchase.errors.full_messages).to include("Addresses can't be blank")
       end
       it 'phone_numberが空だと登録できない' do
-        @purchase.phone_number = ""
+        @purchase.phone_number = ''
         @purchase.valid?
         expect(@purchase.errors.full_messages).to include("Phone number can't be blank")
       end
       it 'phone_numberが11文字以上だと登録できない' do
-        @purchase.phone_number = "0901549849854915823456789"
+        @purchase.phone_number = '0901549849854915823456789'
         @purchase.valid?
-        expect(@purchase.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
+        expect(@purchase.errors.full_messages).to include('Phone number is too long (maximum is 11 characters)')
       end
     end
   end

@@ -1,8 +1,7 @@
 class ItemPurchasesController < ApplicationController
-  
   def new
     @item = Item.find(params[:item_id])
-    redirect_to root_path if !user_signed_in? || current_user.id == @item.user_id || @item.item_purchase != nil
+    redirect_to root_path if !user_signed_in? || current_user.id == @item.user_id || !@item.item_purchase.nil?
     @purchase = Purchase.new
   end
 
@@ -24,7 +23,7 @@ class ItemPurchasesController < ApplicationController
   end
 
   def pay_item
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: purchase_params[:price],   # 商品の値段
       card: purchase_params[:token],     # カードトークン
