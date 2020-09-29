@@ -10,11 +10,11 @@ class Purchase
     validates :item_id
 
     #shipping_addressテーブルのバリデーション
-    validates :postal_code, format: { with: /\d{3}-\d{4}/ }
+    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :city
     validates :addresses
-    validates :phone_number, format: { with: /\d{,11}/ }
+    validates :phone_number, length: { maximum: 11 }
 
     #クレジット機能のトークン
     validates :token
